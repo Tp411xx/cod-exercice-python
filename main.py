@@ -32,12 +32,18 @@ def exercice6():
     somme = nombre1 - nombre2
     print (f"La somme de {nombre1} et {nombre2} est {somme}")
 
+def exercice7():
+    print("exercice 7 : Multiplication simple")
+    nombre1 = float(input("entrez votre nombre 1 :"))
+    nombre2 = float(input("entrez votre nombre 2 :"))
+    somme = nombre1 * nombre2
+    print (f"La somme de {nombre1} et {nombre2} est {somme}")
 
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
-    if choix == "6":
-        exercice6()
+    if choix == "7":
+        exercice7()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
