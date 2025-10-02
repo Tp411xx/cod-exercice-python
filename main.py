@@ -275,6 +275,41 @@ def exercice37():
     print(" * \n ** \n *** \n **** \n *****")
 
 
+def exercice38():    
+    print("exercice 38 : calculatrice simple")
+    nombre1 = float(input("entrez votre nombre 1 :"))
+    opérateur = input("entrez un opérateur (+, -, *, /) :")
+    nombre2 = float(input("entrez votre nombre 2 :"))
+    if opérateur == "+":
+        résultat = nombre1 + nombre2
+        print (f"La somme de {nombre1} et {nombre2} est {résultat}")
+    elif opérateur == "-":
+        résultat = nombre1 - nombre2
+        print (f"La soustraction de {nombre1} et {nombre2} est {résultat}")
+    elif opérateur == "*":
+        résultat = nombre1 * nombre2
+        print (f"La multiplication de {nombre1} et {nombre2} est {résultat}")
+    elif opérateur == "/":
+        if nombre2 == 0:
+            print("Erreur : Division par zéro impossible.")
+            return
+        résultat = nombre1 / nombre2
+        print (f"La division de {nombre1} et {nombre2} est {résultat}")
+    else:
+        print("Opérateur non reconnu.")
+        return
+
+
+def exercice39():
+    print("exercice 39 : . Deviner pair/impair")
+    import random
+    nombre = random.randint(1, 100)
+    pari = input("Pariez sur 'pair' ou 'impair' :").lower()
+    if (nombre % 2 == 0 and pari == "pair") or (nombre % 2 != 0 and pari == "impair"):
+        print(f"Félicitations ! Le nombre était {nombre}, vous avez gagné.")
+    else:
+        print(f"Dommage ! Le nombre était {nombre}, vous avez perdu.")
+
     
    
 
@@ -283,8 +318,8 @@ def exercice37():
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
-    if choix == "37":
-        exercice37()
+    if choix == "39":
+        exercice39()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
