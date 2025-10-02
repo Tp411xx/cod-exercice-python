@@ -17,12 +17,19 @@ def exercice4():
     année_actuelle = 2025
     âge = année_actuelle - année_naissance
     print(f"Vous avez {âge} ans.")
-   
+
+def exercice5():
+    print("exercice 5 : Addition simple")
+    nombre1 = float(input("entrez votre nombre 1 :"))
+    nombre2 = float(input("entrez votre nombre 2 :"))
+    somme = nombre1 + nombre2
+    print (f"La somme de {nombre1} et {nombre2} est {somme}")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
-    if choix == "4":
-        exercice4()
+    if choix == "5":
+        exercice5()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
