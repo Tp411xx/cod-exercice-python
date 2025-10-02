@@ -303,12 +303,23 @@ def exercice38():
 def exercice39():
     print("exercice 39 : . Deviner pair/impair")
     import random
-    nombre = random.randint(1, 100)
+    secret = random.randint(1, 100)
     pari = input("Pariez sur 'pair' ou 'impair' :").lower()
-    if (nombre % 2 == 0 and pari == "pair") or (nombre % 2 != 0 and pari == "impair"):
-        print(f"Félicitations ! Le nombre était {nombre}, vous avez gagné.")
+    if (secret % 2 == 0 and pari == "pair") or (secret % 2 != 0 and pari == "impair"):
+        print(f"Félicitations ! Le nombre était {secret}, vous avez gagné.")
     else:
-        print(f"Dommage ! Le nombre était {nombre}, vous avez perdu.")
+        print(f"Dommage ! Le nombre était {secret}, vous avez perdu.")
+
+
+def exercice40():
+    print("exercice40 : Validation de mot de passe")
+    mot_de_passe = input("entrez un mot de passe :")
+    if len(mot_de_passe) < 6:
+        print("Le mot de passe doit contenir au moins 6 caractères.")
+        return
+        else:
+            print("Mot de passe validé.")
+    
 
     
    
@@ -318,8 +329,8 @@ def exercice39():
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
-    if choix == "39":
-        exercice39()
+    if choix == "40":
+        exercice40()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
