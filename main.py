@@ -245,12 +245,41 @@ def exercice33():
         print(f"{nombre} x {i} = {resultat}")
 
 
+def exercice34():
+    print("exercice34 : Nombres pairs jusqu'à N")
+    numero = input("entrez un nombre :")
+    if nombre % 2 == 0:
+        print(f"{nombre} est pair.")
+    else:
+        print(f"{nombre} n'est pas paire.")
+
+
+def exercice35():
+    print("exercice35 : Carrés parfaits jusqu'à N")
+    nombre = int(input("entrez un nombre."))
+    for i in range(1,nombre + 1):
+        carré = i ** 2
+        if carré <= nombre:
+            print(f"Le carré de {i} est {carré}")
+
+def exercice36():
+    print("exercice 36 : Compter jusqu'à N")
+    nombre = int(input("entrez un nombre :"))
+    mot = input("entrez un mot :")
+    for i in range(nombre +1):
+        if i <= nombre:
+            print(f"{mot}")
+
+    
+   
+
+
 
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
-    if choix == "33":
-        exercice33()
+    if choix == "36":
+        exercice36()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
