@@ -270,6 +270,11 @@ def exercice36():
         if i <= nombre:
             print(f"{mot}")
 
+def exercice37():
+    print("exercice 37 : pyramide d'étoiles")
+    print(" * \n ** \n *** \n **** \n *****")
+
+
     
    
 
@@ -278,8 +283,8 @@ def exercice36():
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
-    if choix == "36":
-        exercice36()
+    if choix == "37":
+        exercice37()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
