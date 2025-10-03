@@ -323,7 +323,8 @@ def exercice40():
     elif not any(char.isupper() for char in mot_de_passe):
         print("Le mot de passe doit contenir au moins une lettre majuscule.")
         return
-    print("Mot de passe validé.")
+    else:
+        print("Mot de passe validé.")
 
 
 def exercice41():
@@ -339,24 +340,35 @@ def exercice41():
 
 def exercice42():
     print("exercice42 : Min et max de 5 nombres")
-    nombre_note = int(input("entrez le nombre de notes :"))
-    while "q" not in Stop:
-        Stop = input("taper q pour arrêter ou un chiffre pour continuer :")
-        break
+    
+    while True:  # boucle infinie, on sort avec break
+        choix = input("Tapez q pour arrêter ou appuyez sur Entrée pour continuer : ")
+        if choix.lower() == "q":  # .lower() gère q ou Q
+            break
+        
+        nombre_note = 5
+        minimum = None
+        maximum = None
+        
         for i in range(1, nombre_note + 1):
-            note = int(input(f"entrez la note {i} :"))
-            if i == 1:
+            note = int(input(f"Entrez la note {i} : "))
+            
+            if minimum is None or note < minimum:
                 minimum = note
+            if maximum is None or note > maximum:
                 maximum = note
-            else:
-                if note < minimum:
-                    minimum = note
-                if note > maximum:
-                    maximum = note 
-    print(f"Le minimum est {minimum} et le maximum est {maximum}")
+        
+        print(f"Le minimum est {minimum} et le maximum est {maximum}")
 
-
-
+def exercice43():
+    print("exercice43 : Compteur de voyelles (simple)")
+    texte = input("entrez un texte :").lower()
+    voyelles = "aeiouy"
+    compteur = 0
+    for char in texte:
+        if char in voyelles:
+            compteur += 1
+    print(f"Le texte contient {compteur} voyelles.")
 
 
 
@@ -366,8 +378,8 @@ def exercice42():
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
-    if choix == "42":
-        exercice42()
+    if choix == "43":
+        exercice43()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
