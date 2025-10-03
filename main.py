@@ -316,21 +316,58 @@ def exercice40():
     mot_de_passe = input("entrez un mot de passe :")
     if len(mot_de_passe) < 6:
         print("Le mot de passe doit contenir au moins 6 caractères.")
+        return   
+    elif not any(char.isdigit() for char in mot_de_passe):
+        print("Le mot de passe doit contenir au moins un chiffre.")
         return
-        else:
-            print("Mot de passe validé.")
-    
+    elif not any(char.isupper() for char in mot_de_passe):
+        print("Le mot de passe doit contenir au moins une lettre majuscule.")
+        return
+    print("Mot de passe validé.")
 
-    
-   
+
+def exercice41():
+    print("exercice41 : Moyenne de 5 notes")
+    nombre_note = int(input("entrez le nombre de notes :"))
+    total = 0
+    for i in range(1, nombre_note + 1):
+        note = int(input(f"entrez la note {i} :"))
+        total += note
+    moyenne = total / nombre_note
+    print(f"La moyenne est de {moyenne}")
+
+
+def exercice42():
+    print("exercice42 : Min et max de 5 nombres")
+    nombre_note = int(input("entrez le nombre de notes :"))
+    while "q" not in Stop:
+        Stop = input("taper q pour arrêter ou un chiffre pour continuer :")
+        break
+        for i in range(1, nombre_note + 1):
+            note = int(input(f"entrez la note {i} :"))
+            if i == 1:
+                minimum = note
+                maximum = note
+            else:
+                if note < minimum:
+                    minimum = note
+                if note > maximum:
+                    maximum = note 
+    print(f"Le minimum est {minimum} et le maximum est {maximum}")
+
+
+
+
+
+
 
 
 
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
-    if choix == "40":
-        exercice40()
+    if choix == "42":
+        exercice42()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
