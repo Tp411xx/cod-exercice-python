@@ -387,8 +387,14 @@ def exercice45():
     print(f"La somme des éléments de la liste est {somme}")
 
 
-    
-
+def exercice46():
+    print("exercice46 : Recherche dans une liste ")
+    liste = list(map(int, intput("entrez une liste de nombres séparés par des espaces : ").split()))
+    nombre = int(input("entrez un nombre à rechercher :"))
+    if nombre in liste:
+        print(f"{nombre} est dans la liste.")
+    else:
+        print(f"{nombre} n'est pas dans la liste.")
 
 
 
@@ -397,8 +403,8 @@ def exercice45():
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
-    if choix == "45":
-        exercice45()
+    if choix == "46":
+        exercice46()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
