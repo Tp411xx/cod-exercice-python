@@ -371,6 +371,25 @@ def exercice43():
     print(f"Le texte contient {compteur} voyelles.")
 
 
+def exercice44():
+    print("exercice44 : Inverser un mot")
+    mot = input("entrez un mot :")
+    mot_inversé = mot[::-1]
+    print(f"Le mot inversé est : {mot_inversé}")
+
+
+def exercice45():
+    print("exercice45 : Somme des éléments d'une liste")
+    liste = list(map(int, input("entrez une liste de nombres séparés par des espaces : ").split()))
+    somme = 0
+    for liste in liste:
+        somme += liste
+    print(f"La somme des éléments de la liste est {somme}")
+
+
+    
+
+
 
 
 
@@ -378,8 +397,8 @@ def exercice43():
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
-    if choix == "43":
-        exercice43()
+    if choix == "45":
+        exercice45()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
