@@ -397,14 +397,45 @@ def exercice46():
         print(f"{nombre} n'est pas dans la liste.")
 
 
+def exercice47():
+    print("exercice47 :Compter les occurrences dans une liste ")
+    liste = list(map(int, intput("entrez une liste de nombres séparés par des espaces : ").split()))
+    nombre = int(input("entrez un nombre à rechercher :"))
+    if nombre in liste:
+        occurrences = liste.count(nombre)
+        print(f"{nombre} apparaît {occurrences} fois dans la liste.")
+    else:
+        print(f"{nombre} n'est pas dans la liste.")
+
+
+def exercice48():
+    print("exercice48 : Liste des diviseurs")
+    nombre = int(input("entrez un nombre :"))
+    diviseurs = []
+    for i in range(1, nombre + 1):
+        if nombre % i == 0:
+            diviseurs.append(i)
+    print(f"Les diviseurs de {nombre} sont : {diviseurs}")
+
+def exercice49():
+    print("exercice49 :Nombre premier (simple)")
+    nombre = int(input("entrez un nombre :"))
+    if nombre < 2:
+        print(f"{nombre} n'est pas un nombre premier.")
+        return
+    for i in range(2, int(nombre**0.5) + 1):
+        if nombre % i == 0:
+            print(f"{nombre} n'est pas un nombre premier.")
+            return
+    print(f"{nombre} est un nombre premier.")
 
 
 
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
-    if choix == "46":
-        exercice46()
+    if choix == "49":
+        exercice49()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
